@@ -1,16 +1,31 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "allowJs": true,
     "sourceMap": true,
     "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": false,
-    "lib": [
-      "esnext"
-    ],
+    "baseUrl": "./",
+    "rootDir": "./",
+    "target": "ES2017",
+    "strict": true,
+    "lib": ["esnext"],
     "esModuleInterop": true,
-    "declaration": true
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "declaration": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@application/*": ["./src/application/*"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@infra/*": ["./src/infra/*"],
+      "@test/*": ["./test/*"]
+    }
   },
-  "include": [
-    "src/**/*.ts"
-  ]
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "coverage"],
+  "files": ["*.d.ts"]
 }

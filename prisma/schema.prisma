@@ -45,8 +45,8 @@ model Update {
   version   String?
   asset     String?
 
-  pruductId    String
-  product      Product       @relation(fields: [pruductId], references: [id])
+  productId    String
+  product      Product       @relation(fields: [productId], references: [id])
   updatePoints UpdatePoint[]
 }
 
