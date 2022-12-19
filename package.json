@@ -2,13 +2,12 @@
   "name": "api-design-in-nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "jest",
     "test:cov": "jest --coverage",
     "dev": "ts-node -r tsconfig-paths/register --files  src/index.ts",
-    "build": "tsc -p tsconfig.json",
-    "start": "node dist/index.js"
+    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist/src",
+    "start": "node -r tsconfig-paths/register dist/src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -28,7 +27,8 @@
     "morgan": "^1.10.0",
     "reflect-metadata": "^0.1.13",
     "supertest": "^6.3.3",
-    "ts-jest": "^29.0.3"
+    "ts-jest": "^29.0.3",
+    "tscpaths": "^0.0.9"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
