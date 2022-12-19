@@ -1,5 +1,5 @@
 import { Replace } from "@helpers/Replace";
-import { randomUUID } from "node:crypto";
+import { randomUUID } from "crypto";
 import { Update } from "../../update/entities/update";
 
 export interface ProductProps {

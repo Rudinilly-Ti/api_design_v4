@@ -1,4 +1,4 @@
-import { randomUUID } from "node:crypto";
+import { randomUUID } from "crypto";
 import { Replace } from "@helpers/Replace";
 import { UpdatePoint } from "../../update-point/entities/update-point";
 
