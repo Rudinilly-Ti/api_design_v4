@@ -8,7 +8,6 @@ export interface UserProps {
   products: Product[];
   createdAt: Date;
 }
-
 export class User {
   private _id: string;
   private props: UserProps;
